@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int adition(int arr1[], int size1) {
+int addition(int arr1[], int size1) {
     int sum1 = 0;
     for (int i = 0; i < size1; ++i) {
         sum1 += arr1[i];
@@ -23,7 +23,7 @@ int factorialofanum(int n) {
     if (n <= 1) {
         return 1;
     }
-    return n * factorial(n - 1);
+    return n * factorialofanum(n - 1);
 }
 bool checkprime(int n) {
     if (n <= 1) {
@@ -72,17 +72,20 @@ int main() {
     cout <<endl;
 
 
-//3. 
-
-    int num = 5;
+//3.
+    int num; 
+    cout << "enter a real number." <<endl;
+    cin >> num ;
     int result = factorialofanum(num);
     cout << "Factorial of " << num << " is " << result << endl;
 
 
 //4.
 
-    int numb = 13;
-    if (checkPrime(numb)) {
+    int numb;
+    cout << "enter a real number." <<endl;
+    cin >> numb ;
+    if (checkprime(numb)) {
         cout << numb << " is a prime number." <<endl;
     } else {
         cout << numb << " is not a prime number." << endl;
@@ -92,7 +95,7 @@ int main() {
 
 //6. 
 
-    int arr3[] = {3, 7, 1, 9, 4};
+    int arr3[] = {6, 9, 10, 8, 27};
     int size3 = sizeof(arr3) / sizeof(arr3[0]);
 
     int maxElement = Maximum(arr3, size3);
