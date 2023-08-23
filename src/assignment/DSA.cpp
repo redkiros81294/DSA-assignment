@@ -1,16 +1,14 @@
-
-
 #include <iostream>
 using namespace std;
 
-int sumArray(int arr1[], int size1) {
+int adition(int arr1[], int size1) {
     int sum1 = 0;
     for (int i = 0; i < size1; ++i) {
         sum1 += arr1[i];
     }
     return sum1;
 }
-void rotateArray(int arr2[], int size2, int positions) {
+void rotation(int arr2[], int size2, int positions) {
     int temp[size2];
 
     for (int i = 0; i < size2; ++i) {
@@ -21,13 +19,13 @@ void rotateArray(int arr2[], int size2, int positions) {
         arr2[i] = temp[i];
     }
 }
-int factorial(int n) {
+int factorialofanum(int n) {
     if (n <= 1) {
         return 1;
     }
     return n * factorial(n - 1);
 }
-bool isPrime(int n) {
+bool checkprime(int n) {
     if (n <= 1) {
         return false;
     }
@@ -39,7 +37,7 @@ bool isPrime(int n) {
     return true;
 }
 
-int findMax(int arr3[], int size3) {
+int Maximum(int arr3[], int size3) {
     int maxElement = arr3[0];
     for (int i = 1; i < size3; ++i) {
         if (arr3[i] > maxElement) {
@@ -49,23 +47,23 @@ int findMax(int arr3[], int size3) {
     return maxElement;
 }
 
-// 1. Sum of Array Elements
+// 1. 
 
 int main() {
     int arr1[] = {1, 2, 3, 4, 5};
     int size1 = sizeof(arr1) / sizeof(arr1[0]);
 
-    int totalSum = sumArray(arr1, size1);
+    int totalSum = addition(arr1, size1);
     cout << "Sum of array elements: " << totalSum << endl;
 
 
-// 2. Rotate Array to the Right
+// 2. 
 
     int arr2[] = {1, 2, 3, 4, 5};
     int size2 = sizeof(arr2) / sizeof(arr2[0]);
     int positions = 2;
 
-    rotateArray(arr2, size2, positions);
+    rotation(arr2, size2, positions);
 
     cout << "Rotated array: ";
     for (int i = 0; i < size2; ++i) {
@@ -74,17 +72,17 @@ int main() {
     cout <<endl;
 
 
-//3. Recursive Factorial Function
+//3. 
 
     int num = 5;
-    int result = factorial(num);
+    int result = factorialofanum(num);
     cout << "Factorial of " << num << " is " << result << endl;
 
 
-//4. Prime Number Check
+//4.
 
     int numb = 13;
-    if (isPrime(numb)) {
+    if (checkPrime(numb)) {
         cout << numb << " is a prime number." <<endl;
     } else {
         cout << numb << " is not a prime number." << endl;
@@ -92,12 +90,12 @@ int main() {
 
 
 
-//6. Finding Maximum Element
+//6. 
 
     int arr3[] = {3, 7, 1, 9, 4};
     int size3 = sizeof(arr3) / sizeof(arr3[0]);
 
-    int maxElement = findMax(arr3, size3);
+    int maxElement = Maximum(arr3, size3);
     cout << "Maximum element: " << maxElement << endl;
 
     return 0;
